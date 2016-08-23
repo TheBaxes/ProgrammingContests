@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+
+/**
+ *
+ * @author Baxes
+ */
+public class minimaraton {
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+        int d = in.nextInt();
+        while (!(a == 0 && b == 0 && c == 0 && d == 0)) {
+            if (c == 0) {
+                c = 24;
+            }
+            int mina = a * 60 + b;
+            int minb = c * 60 + d;
+            int res = minb - mina;
+            System.out.println(res < 0? 1440 + res : res);
+            a = in.nextInt();
+            b = in.nextInt();
+            c = in.nextInt();
+            d = in.nextInt();
+        }
+    }
+
+}
