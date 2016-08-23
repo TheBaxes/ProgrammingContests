@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+class Main
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+        while(!(a == 0 && b == 0 && c == 0)){
+            String p = "";
+            int d = c - b;
+            int e = b - a;
+            if(d == e){
+                p = "AP" + " " + (c + d);
+            }
+            else {
+                d = c / b;
+                p = "GP" + " " + (c * d);
+            }
+            System.out.println(p);
+            a = in.nextInt();
+            b = in.nextInt();
+            c = in.nextInt();
+        }
+    }
+}
