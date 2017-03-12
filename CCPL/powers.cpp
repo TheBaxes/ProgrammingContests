@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void pew(long n) { 
+void pew(long n) {
   long potato = sqrt(n);
   for (long i = 2; i <= potato; ++i) {
     double pew = log10(n)/log10(i);
